@@ -20,7 +20,7 @@ module.exports = {
       sonicSilver: '#777777',
       warning: '#D24340',
       lightYellow: '#FBC81D',
-    }
+    },
   },
   plugins: [],
 }

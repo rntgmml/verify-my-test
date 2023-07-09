@@ -9,7 +9,7 @@ const codec = localFont({
       style: 'normal',
     },
     {
-      path: '../../public/fonts/Codec-Pro-Thin.otf',
+      path: '../../public/fonts/Codec-Pro-Light.otf',
       weight: '300',
       style: 'normal',
     },
