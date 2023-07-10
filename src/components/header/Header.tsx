@@ -9,18 +9,18 @@ interface HeaderProps {
 
 export const Header = ({ step }: HeaderProps) => {
     return (
-        <div>
+        <div className='md:pt-5'>
             <div className='hidden md:flex justify-between items-center'>
                 <Image src={Logo} priority alt="Verify my logo" />
-                <Progress step={1} totalSteps={5} />
+                <Progress step={step} totalSteps={5} />
             </div>
             <div className='flex justify-between'>
                 <div>
                     <div className='flex md:flex-col items-center md:items-start mb-[14px] md:mb-[20px]'>
-                        <Image src={BackIcon} priority alt="Arrow back" className='mr-[10px] md:mb-[20px]' />
-                        <p className='font-semibold text-[19px] md:text-[36px] text-darkGrey'>Join VerifyMyAge</p>
+                        <Image src={BackIcon} priority alt="Arrow back" className='mr-[10px] md:mb-[20px] md:w-[44px] md:h-[44px]' />
+                        <p className='font-bold text-[19px] md:text-4xl text-darkGrey'>Join VerifyMyAge</p>
                     </div>
-                    <p className='mb-[30px] md:mb-[60px] whitespace-pre md:whitespace-nowrap'>{`Let's start by setting up\nyour login details.`}</p>
+                    <p className='mb-[30px] ml-8 md:ml-0 md:mb-[60px] whitespace-pre md:whitespace-nowrap'>{`Let's start by setting up\nyour login details.`}</p>
                 </div>
                 <div className='md:hidden'>
                     <Progress step={step} totalSteps={5} />

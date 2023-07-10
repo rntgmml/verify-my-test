@@ -35,7 +35,7 @@ export const Input = ({ legend, isValid = true, isPassword = false, type, value,
     };
 
     return (
-        <fieldset className={`border border-solid ${borderClassName} py-2 px-2 rounded-full w-full md:w-[500px] mb-5`}>
+        <fieldset className={`border border-solid ${borderClassName} pt-1 pb-2 px-2 rounded-full w-full md:w-[500px] mb-5`}>
             <legend className="text-sm font-semibold px-1.5">{legend}</legend>
             <div className="relative flex items-center">
                 {isMobile ? (

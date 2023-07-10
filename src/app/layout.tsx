@@ -18,6 +18,11 @@ const codec = localFont({
       weight: '600',
       style: 'normal',
     },
+    {
+      path: '../../public/fonts/Codec-Pro-Extrabold.otf',
+      weight: '700',
+      style: 'normal',
+    },
   ],
   variable: '--font-codec',
 })
