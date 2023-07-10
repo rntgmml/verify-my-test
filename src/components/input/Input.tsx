@@ -18,6 +18,7 @@ type InputProps = {
 export const Input = ({ legend, isValid = true, isPassword = false, type, value, onChange, isMobile = false, mobileNumber }: InputProps) => {
     const borderClassName = isValid ? 'border-sonicSilver' : 'border-warning';
     const [valueMobile, setValueMobile] = useState<any>(mobileNumber);
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
     useEffect(() => {
         if (isMobile) {
@@ -29,6 +30,10 @@ export const Input = ({ legend, isValid = true, isPassword = false, type, value,
         setValueMobile(newValue);
     };
 
+    const togglePasswordVisibility = () => {
+        setIsPasswordVisible(!isPasswordVisible);
+    };
+
     return (
         <fieldset className={`border border-solid ${borderClassName} py-2 px-2 rounded-full w-full md:w-[500px] mb-5`}>
             <legend className="text-sm font-semibold px-1.5">{legend}</legend>
@@ -37,11 +42,11 @@ export const Input = ({ legend, isValid = true, isPassword = false, type, value,
                     <PhoneInput placeholder="Enter phone number" value={valueMobile} onChange={handleMobileChange} />
 
                 ) : (
-                    <input type={type} placeholder="Please type in..." className="ml-2 focus:outline-none" value={value} onChange={onChange} />
+                    <input type={isPasswordVisible ? 'text' : type} placeholder="Please type in..." className="ml-2 focus:outline-none" value={value} onChange={onChange} />
 
                 )}
                 {isPassword && (
-                    <div className="absolute right-1">
+                    <div className="absolute right-1" onClick={togglePasswordVisibility}>
                         <Image src={PasswordIcon} priority alt="Password icon" className="mr-2" width={16} height={16} />
                     </div>
                 )}
