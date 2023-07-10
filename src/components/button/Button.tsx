@@ -13,7 +13,7 @@ export const Button = ({
     children,
 }: ButtonProps) => {
 
-    const buttonStyle = `flex items-center justify-center rounded-full text-sm w-full py-2 lg:py-6 lg:px-7 lg:w-auto ${variant === 'secondary' ? 'border-darkGrey border' : 'border-none'
+    const buttonStyle = `flex items-center justify-center rounded-full text-sm w-full py-2 md:py-6 sm:px-7 md:w-auto mb-5 ${variant === 'secondary' ? 'border-darkGrey border' : 'border-none'
         } ${variant === 'primary' ? 'bg-lightYellow text-darkGrey font-semibold' : 'bg-white text-darkGrey'}`;
 
     return (

@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.PhoneInput--focus input {
+    border: none;
+    outline: none;
+}
